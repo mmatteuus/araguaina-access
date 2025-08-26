@@ -135,16 +135,18 @@ All colors MUST be HSL.
 @layer components {
   /* SIG Components */
   .sig-nav {
-    @apply bg-gradient-to-r from-primary to-primary-glow shadow-elevated;
+    @apply bg-gradient-to-r from-primary to-primary-glow;
+    box-shadow: var(--shadow-elevated);
   }
   
   .sig-card {
-    @apply bg-card border border-border shadow-soft rounded-lg;
+    @apply bg-card border border-border rounded-lg;
+    box-shadow: var(--shadow-soft);
     transition: var(--transition-smooth);
   }
   
   .sig-card:hover {
-    @apply shadow-elevated;
+    box-shadow: var(--shadow-elevated);
     transform: translateY(-2px);
   }
   
@@ -178,10 +180,11 @@ All colors MUST be HSL.
   
   .sig-btn-gov {
     @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground;
-    @apply hover:shadow-elevated transition-all duration-200;
+    @apply transition-all duration-200;
   }
   
   .sig-btn-gov:hover {
+    box-shadow: var(--shadow-elevated);
     transform: translateY(-1px);
   }
 }
